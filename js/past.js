@@ -16,8 +16,8 @@ const app = createApp({
         .then( response => response.json() )
         .then( data => { 
             this.listaCategorias = Array.from( new Set( data.events.map( event => event.category )));
-            this.eventos = data.events;
-            this.eventosFiltrados = data.events;
+            this.eventos = data.events.filter(event => event.date < data.currentDate);
+            this.eventosFiltrados = data.events.filter(event => event.date < data.currentDate);
         })
         .catch( err => console.log( err ) )
     },
