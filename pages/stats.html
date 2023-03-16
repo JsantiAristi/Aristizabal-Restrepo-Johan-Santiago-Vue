@@ -43,7 +43,7 @@
         </nav>
     </header>
     <!-- header -->
-    <main id="app">
+    <main id="app" v-cloak>
         <!-- titulos principales -->
         <section id="titulo-principal">
             <div id="carouselExample" class="carousel slide">
@@ -97,7 +97,7 @@
                     <template v-for="(results , category) in categories">
                         <tr>
                             <td class="firt-row">{{category}}</td>
-                            <td class="second-row">{{categories[category].price}}</td>
+                            <td class="second-row">{{categories[category].price.toLocaleString("es-AR", {style:"currency",currency:"USD"})}}</td>
                             <td>{{((categories[category].estimate / categories[category].capacity)*100).toFixed(2)}}%</td>
                         </tr>
                     </template>
@@ -118,7 +118,7 @@
                     <template v-for="(results , category) in categories2">
                         <tr>
                             <td class="firt-row">{{category}}</td>
-                            <td class="second-row">{{categories2[category].price}}</td>
+                            <td class="second-row">{{categories2[category].price.toLocaleString("es-AR", {style:"currency",currency:"USD"})}}</td>
                             <td>{{((categories2[category].assistance / categories2[category].capacity)*100).toFixed(2)}}%</td>
                         </tr>
                     </template>

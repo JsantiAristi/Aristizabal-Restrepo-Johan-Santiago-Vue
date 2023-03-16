@@ -8,7 +8,7 @@ const app = createApp({
         listaCategorias: [],
         valorBusqueda: "",
         checked: [],
-        eventosFiltrados: []
+        eventosFiltrados: undefined
         }
     },
     created(){

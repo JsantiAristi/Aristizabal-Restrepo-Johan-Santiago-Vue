@@ -82,7 +82,7 @@
         </div>
 <!-- inputs generales -->
 <!-- cards -->
-        <section class="container mt-4" id="cards">
+        <section class="container mt-4" id="cards" v-cloak>
             <div class="row">
                 <template v-if="eventosFiltrados.length > 0" v-for="events of eventosFiltrados">
                     <div class="col-12 col-md-6 col-lg-3 mb-3">
@@ -105,7 +105,7 @@
                     </div>  
                 </template>  
                 <template v-else>
-                    <h2 class="text-dark text-center">The element was not found</h2>
+                        <h2 class="text-dark text-center">The element was not found</h2>
                 </template>         
             </div>        
         </section>

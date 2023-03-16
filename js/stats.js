@@ -33,7 +33,7 @@ const app = createApp({
                     (evento1.assistance / evento1.capacity) * 100 -
                     (evento2.assistance / evento2.capacity) * 100
                 );
-            }).slice(-1)[0]
+            }).slice(0,1)[0]
 
             this.mayorCapacidad = data.events.sort((evento1, evento2) => {
                 return ( evento1.capacity - evento2.capacity);
@@ -69,9 +69,7 @@ const app = createApp({
                 this.categories2[event.category].price += event.price * event.assistance
                 this.categories2[event.category].capacity += event.capacity
                 this.categories2[event.category].assistance += event.assistance
-            })
-
-            
+            })    
         })
         .catch( err => console.log( err ) )
     },
