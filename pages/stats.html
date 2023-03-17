@@ -97,8 +97,8 @@
                     <template v-for="(results , category) in categories">
                         <tr>
                             <td class="firt-row">{{category}}</td>
-                            <td class="second-row">{{categories[category].price.toLocaleString("es-AR", {style:"currency",currency:"USD"})}}</td>
-                            <td>{{((categories[category].estimate / categories[category].capacity)*100).toFixed(2)}}%</td>
+                            <td class="second-row">{{results.price.toLocaleString()}}</td>
+                            <td>{{((results.estimate / results.capacity)*100).toFixed(2)}}%</td>
                         </tr>
                     </template>
                 </tbody>
@@ -118,8 +118,8 @@
                     <template v-for="(results , category) in categories2">
                         <tr>
                             <td class="firt-row">{{category}}</td>
-                            <td class="second-row">{{categories2[category].price.toLocaleString("es-AR", {style:"currency",currency:"USD"})}}</td>
-                            <td>{{((categories2[category].assistance / categories2[category].capacity)*100).toFixed(2)}}%</td>
+                            <td class="second-row">{{results.price.toLocaleString()}}</td>
+                            <td>{{((results.assistance / results.capacity)*100).toFixed(2)}}%</td>
                         </tr>
                     </template>
                 </tbody>
